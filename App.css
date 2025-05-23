@@ -1,0 +1,114 @@
+body {
+  background-image: url("./cloud-forest-landscape_23-2151794661.avif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  color: #f4f0f0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  backdrop-filter: blur(5px);
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.weather-card {
+  background-color: rgba(0, 0, 0, 0.7); /* Card background with some transparency */
+  padding: 40px;
+  border-radius: 12px;
+  width: 350px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Soft shadow around card */
+}
+
+input {
+  padding: 12px;
+  font-size: 18px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+  margin-bottom: 15px;
+}
+
+input:focus {
+  border-color: #0288d1;
+  outline: none;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 18px;
+  background-color: #0288d1;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0277bd;
+  transform: scale(1.05);
+}
+
+button:active {
+  background-color: #01579b;
+  transform: scale(1);
+}
+
+.result {
+  margin-top: 30px;
+  font-size: 250px;
+  font-weight: bold;
+  color: #f4f0f0;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  width: 100%;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  transform: scale(0.9);
+  transition: transform 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.result:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .weather-card {
+    width: 90%;
+    padding: 30px;
+  }
+  .result {
+    font-size: 22px;
+  }
+}
